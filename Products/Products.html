@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Products Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=AR+One+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="products.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+	  background-color: white;
+    }
+	
+	.content {
+	margin-top: 80px;
+	padding: 16px;
+	}
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+	  z-index: 1000;
+    }
+	
+    #navbar ul {
+   list-style-type: none;
+   padding: 0;
+   overflow: hidden;
+   background-color: #D4FAFF;
+   border-radius: 10px;
+   border-style: solid;
+   margin-right: 20px;
+   margin-top: 1px;
+   margin-left: 20px;
+   }
+   
+   #navbar li {float: left;}
+   
+   #navbar li a {
+   display: block;
+   text-align: center;
+   padding: 44px 70px;
+   text-decoration: none;
+   font-family: fantasy;
+   color: indigo;
+   font-size: 20px;
+   }
+   
+   #navbar li a:hover {
+   background-color: #FFEA00;
+   color: black;
+   }
+   
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown .dropbtn {
+      font-size: 20px;
+      border: none;
+      outline: none;
+	  font-family: fantasy;
+      color: indigo;
+      padding: 42px 80px;
+      background-color: inherit;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #D4FAFF;
+      min-width: 200px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Style for the dropdown links */
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 20px;
+      text-align: center;
+	  font-family: fantasy;
+      color: indigo;
+    }
+
+    /* Change color on hover for dropdown links */
+    .dropdown-content a:hover {
+      background-color: #FFEA00;
+      color: black;
+    }
+
+    .dropdown .dropbtn:hover {
+      color: black;
+	  background-color: #D4FAFF;
+    }
+	
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+<div class="content">
+<section class="heading">
+    <h1 class="heading">PRODUCTS</h1>
+</section>
+
+<script>
+    const products = [
+        {
+            image: 'images/anticeptic solution.png',
+            name: 'ANTISEPTIC SOLUTION',
+            description: 'Antiseptic solutions containing isopropyl alcohol, povidone-iodine, and/or chlorhexidine gluconate are most commonly used for patient skin preparation.',
+            price: 'RM 7.00'
+        },
+         {
+            image: 'images/aspirin.png',
+            name: 'ASPIRIN',
+            description: 'Works by stopping the production of certain natural substances that cause fever, pain, swelling, and blood clots.',
+            price: 'RM 10.00'
+        },
+         {
+            image: 'images/cotton.png',
+            name: 'COTTON',
+            description: 'Cotton balls have multiple uses in the medical field including cleaning out wounds with hydrogen peroxide or iodine, applying antiseptics or topical ointments, cleaning minor cuts and skin irritations, and stopping blood after an injection is given or blood withdrawn.',
+            price: 'RM 5.00'
+        },
+         {
+            image: 'images/eye mo.png',
+            name: 'EYE DROP',
+            description: 'For quick relief of eye redness and minor discomforts caused by irritants.',
+            price: 'RM 9.00'
+        },
+         {
+            image: 'images/Oral B.jpg',
+            name: 'MOUTH RINSE',
+            description: 'To help promote oral hygiene, reduce oral discomfort, provide moisture to oral tissues or help with bad breath. ',
+            price: 'RM 19.90'
+        },
+         {
+            image: 'images/thermometer.png',
+            name: 'THERMOMETER',
+            description: 'To gain an accurate reading of a patient`s core body temperature',
+            price: 'RM 110.00'
+        },
+         {
+            image: 'images/throat pain medicine.png',
+            name: 'STREPSILS',
+            description: 'For the symptomatic relief of mouth and throat infections, dry, irritating cough associated with the common cold and nasal congestion.',
+            price: 'RM 6.00'
+        },
+         {
+            image: 'images/woods.png',
+            name: 'COUGH SYRUP',
+            description: ' Relieves coughing, soothes sore throat, loosens phlegm and expels mucus. ',
+            price: 'RM 6.00'
+        },
+         {
+            image: 'images/glove.jpg',
+            name: 'SURGICAL GLOVE',
+            description: 'To protect the wearer and/or the patient from the spread of micro-organisms that may potentially cause infection or illness during medical procedures and examinations',
+            price: 'RM 7.00'
+        },
+         {
+            image: 'images/mask.jpg',
+            name: 'SURGICAL MASK',
+            description: 'Reduce airborne transmission of pathogens and other aerosolized contaminants between the wearer and nearby people via respiratory droplets ejected when sneezing, coughing, forceful expiration',
+            price: 'RM 24.90'
+        },
+        // Add more product entries as needed
+    ];
+
+    for (let i = 0; i < products.length; i++) {
+        const product = products[i];
+
+        document.write(`
+            <section class="product">
+                <img src="${product.image}" alt="Product">
+                <div class="product-info">
+                    <h2>${product.name}</h2>
+                    <p>Description: ${product.description}</p>
+                    <p>Price: ${product.price}</p>
+                    <div class="button">
+                <input type="button" value="BUY">
+                    </div>
+                    <div class="button" id="submittedMessage" style="display: none;">
+        <p>Submitted successfully!</p>
+                    </div>
+                </div>
+                <div class="quantity-select">
+                    <p>Quantity</p>
+                    <input type="number" value="1">
+                </div>
+            </section>
+        `);
+    }
+
+</script>
+</div>
+
+  <div id="navbar">
+  <ul>
+   <li><img src="images/logo.png" alt="Pharmacylogo" width="80" height="100"
+   style="margin-left: 20px; margin-bottom: 2px; margin-top: 2px; 
+   margin-right: 40px;"></li>
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="../AboutUs/AboutUs.html">About Us</a></li>
+   <li><a href="../Services/Services.html">Services</a></li>
+   <li><a href="Products.html">Products</a></li>
+   <li><a href="../ContactUs/ContactUs.html">Contact Us</a></li>
+    <div class="dropdown">
+      <button class="dropbtn">More
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Promotion/Promotion.html">Promotion</a>
+        <a href="../FindUs/FindUs.html">Find Us</a>
+      </div>
+    </div>
+  </ul>
+  </div>
+</body>
+</html>

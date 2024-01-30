@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HealthyMeds Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.js"></script>
+	
+	<style>	
+	.content {
+	margin-top: 100px;
+	padding: 16px;
+	}
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+	  z-index: 1000;
+    }
+	
+    #navbar ul {
+   list-style-type: none;
+   padding: 0;
+   overflow: hidden;
+   background-color: #D4FAFF;
+   border-radius: 10px;
+   border-style: solid;
+   margin-right: 30px;
+   margin-top: 1px;
+   margin-left: 10px;
+   }
+   
+   #navbar li {float: left;}
+   
+   #navbar li a {
+   display: block;
+   text-align: center;
+   padding: 42px 70px;
+   text-decoration: none;
+   font-family: fantasy;
+   color: indigo;
+   font-size: 20px;
+   }
+   
+   #navbar li a:hover {
+   background-color: #FFEA00;
+   color: black;
+   }
+   
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown .dropbtn {
+      font-size: 20px;
+      border: none;
+      outline: none;
+	  font-family: fantasy;
+      color: indigo;
+      padding: 40px 80px;
+      background-color: inherit;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #D4FAFF;
+      min-width: 200px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Style for the dropdown links */
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 20px;
+      text-align: center;
+	  font-family: fantasy;
+      color: indigo;
+    }
+
+    /* Change color on hover for dropdown links */
+    .dropdown-content a:hover {
+      background-color: #FFEA00;
+      color: black;
+    }
+
+    .dropdown .dropbtn:hover {
+      color: black;
+    }
+	
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar">
+  <ul>
+   <li><img src="images/logo.png" alt="Pharmacylogo" width="80" height="100"
+   style="margin-left: 20px; margin-bottom: 2px; margin-top: 2px; 
+   margin-right: 40px;"></li>
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="../AboutUs/AboutUs.html">About Us</a></li>
+   <li><a href="../Services/Services.html">Services</a></li>
+   <li><a href="../Products/Products.html">Products</a></li>
+   <li><a href="ContactUs.html">Contact Us</a></li>
+    <div class="dropdown">
+      <button class="dropbtn">More
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Promotion/Promotion.html">Promotion</a>
+        <a href="../FindUs/FindUs.html">Find Us</a>
+      </div>
+    </div>
+  </ul>
+  </div>
+ 
+	<div class="content">
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="container">
+        <form action="process_contact.php" method="post" onsubmit="showAlert()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+			
+			<div class="form-group">
+            <label for="state">State:</label>
+            <select id="state" name="state" onchange="getcity();">
+
+            <option value="">Select State</option>
+            <option value="Johor">Johor</option>
+            <option value="Kedah">Kedah</option>
+            <option value="Kelantan">Kelantan</option>
+            <option value="Melaka">Melaka</option>
+            <option value="Pahang">Pahang</option>
+            <option value="Perak">Perak</option>
+            <option value="Perlis">Perlis</option>
+            <option value="Penang">Penang</option>
+            <option value="Sabah">Sabah</option>
+            <option value="Sarawak">Sarawak</option>
+            <option value="Selangor">Selangor</option>
+            <option value="Terengganu">Terengganu</option>
+            <option value="FederalTerritories">Wilayah Persekutuan</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <select id="city" name="city">
+                    <option value="">Select City</option>
+                </select>
+            </div>
+			
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <label for="appointmentDate">Select an appointment date:</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+            <br>
+            <label for="appointmentTime">Select an appointment time:</label>
+            <input type="time" id="appointmentTime" name="appointmentTime" required>
+            <br>
+
+            <div class="form-group">
+                <input type="button" value="Submit" onclick="validateAndSubmit()">
+            </div>
+
+        </form>
+        
+        <div class="contact-info">
+            <p><strong>Phone Number:</strong> +60-19-340-1438</p>
+            <p><strong>Email Address:</strong> healthymeds@pharmacy.com</p>
+        </div>
+    </div>
+
+    <div class="form-group" id="submittedMessage" style="display: none;">
+        <p>Submitted successfully!</p>
+    </div>
+	</div>
+    <script src="ContactUs.js"></script>
+</body>
+</html>

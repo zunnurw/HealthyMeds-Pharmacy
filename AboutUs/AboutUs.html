@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.js"></script>
+
+	<style>
+	.content {
+	margin-top: 140px;
+	padding: 16px;
+	}
+
+	
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+	  z-index: 1000;
+    }
+	
+    #navbar ul {
+   list-style-type: none;
+   padding: 0;
+   overflow: hidden;
+   background-color: #D4FAFF;
+   border-radius: 10px;
+   border-style: solid;
+   margin-right: 20px;
+   margin-top: 1px;
+   margin-left: 20px;
+   }
+   
+   #navbar li {float: left;}
+   
+   #navbar li a {
+   display: block;
+   text-align: center;
+   padding: 42px 70px;
+   text-decoration: none;
+   font-family: fantasy;
+   color: indigo;
+   font-size: 20px;
+   }
+   
+   #navbar li a:hover {
+   background-color: #FFEA00;
+   color: black;
+   }
+   
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown .dropbtn {
+      font-size: 20px;
+      border: none;
+      outline: none;
+	  font-family: fantasy;
+      color: indigo;
+      padding: 40px 80px;
+      background-color: inherit;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #D4FAFF;
+      min-width: 200px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Style for the dropdown links */
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 20px;
+      text-align: center;
+	  font-family: fantasy;
+      color: indigo;
+    }
+
+    /* Change color on hover for dropdown links */
+    .dropdown-content a:hover {
+      background-color: #FFEA00;
+      color: black;
+    }
+
+    .dropdown .dropbtn:hover {
+      color: black;
+    }
+	
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar">
+  <ul>
+   <li><img src="images/logo.png" alt="Pharmacylogo" width="80" height="100"
+   style="margin-left: 20px; margin-bottom: 2px; margin-top: 2px; 
+   margin-right: 40px;"></li>
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="AboutUs.html">About Us</a></li>
+   <li><a href="../Services/Services.html">Services</a></li>
+   <li><a href="../Products/Products.html">Products</a></li>
+   <li><a href="../ContactUs/ContactUs.html">Contact Us</a></li>
+    <div class="dropdown">
+      <button class="dropbtn">More
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Promotion/Promotion.html">Promotion</a>
+        <a href="../FindUs/FindUs.html">Find Us</a>
+      </div>
+    </div>
+  </ul>
+  </div><br><br><br><br><br>
+
+<div class="content">
+<div class="section">
+  <div class="title">
+    <h1>ABOUT US</h1><br><br><br>
+  </div>
+	<div class="container">
+	    <div class="box">
+		    <h2>ABOUT US</h2>
+			<h3>ABOUT US</h3><br>
+			<p>HealthyMeds Pharmacy is a leading healthcare provider committed to enhancing the
+			well-being and quality of life of our community. We specialize in providing a wide range
+			of pharmaceutical products and services, including prescription medications, 
+			over-the-counter drugs, health consultations, and wellness products. Our dedicated team of
+			professionals is focused on delivering personalized care and expert advice to meet the 
+			unique needs of our customers.</p>
+		</div>
+		<div class="box">
+		    <h2>VISION</h2>
+			<h3>VISION</h3><br>
+			<p>Our vision is to be the trusted partner in health and wellness for every individual we serve. 
+			We aim to set the standard for excellence in pharmaceutical care, combining advanced technology 
+			with compassionate, human-centered service. We aspire to be an integral part of our community's 
+			healthcare journey, promoting a healthier and happier life for all.</p>
+		</div>
+		<div class="box">
+		    <h2>MISSION</h2>
+			<h3>MISSION</h3><br>
+			<p>Our mission is to provide accessible, reliable, and compassionate pharmaceutical care. We aim 
+			to empower individuals to take charge of their health by offering a diverse range of products, 
+			expert advice, and personalized services. We are dedicated to fostering a healthier and happier 
+			community through excellence in pharmacy practice.</p>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>			

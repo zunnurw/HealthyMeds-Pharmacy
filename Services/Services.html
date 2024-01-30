@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HealthyMeds Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.js"></script>
+    
+<style>
+	.content {
+	margin-top: 100px;
+	padding: 16px;
+	}
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+	  z-index: 1000;
+    }
+	
+    #navbar ul {
+   list-style-type: none;
+   padding: 0;
+   overflow: hidden;
+   background-color: #D4FAFF;
+   border-radius: 10px;
+   border-style: solid;
+   margin-right: 20px;
+   margin-top: 1px;
+   }
+   
+   #navbar li {float: left;}
+   
+   #navbar li a {
+   display: block;
+   text-align: center;
+   padding: 42px 70px;
+   text-decoration: none;
+   font-family: fantasy;
+   color: indigo;
+   font-size: 20px;
+   }
+   
+   #navbar li a:hover {
+   background-color: #FFEA00;
+   color: black;
+   }
+   
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown .dropbtn {
+      font-size: 20px;
+      border: none;
+      outline: none;
+	  font-family: fantasy;
+      color: indigo;
+      padding: 40px 80px;
+      background-color: inherit;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #D4FAFF;
+      min-width: 200px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Style for the dropdown links */
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 20px;
+      text-align: center;
+	  font-family: fantasy;
+      color: indigo;
+    }
+
+    /* Change color on hover for dropdown links */
+    .dropdown-content a:hover {
+      background-color: #FFEA00;
+      color: black;
+    }
+
+    .dropdown .dropbtn:hover {
+      color: black;
+    }
+	
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+</style>
+</head>
+<body>
+  <div id="navbar">
+  <ul>
+   <li><img src="images/logo.png" alt="Pharmacylogo" width="80" height="100"
+   style="margin-left: 20px; margin-bottom: 2px; margin-top: 2px; 
+   margin-right: 40px;"></li>
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="../AboutUs/AboutUs.html">About Us</a></li>
+   <li><a href="Services.html">Services</a></li>
+   <li><a href="../Products/Products.html">Products</a></li>
+   <li><a href="../ContactUs/ContactUs.html">Contact Us</a></li>
+    <div class="dropdown">
+      <button class="dropbtn">More
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Promotion/Promotion.html">Promotion</a>
+        <a href="../FindUs/FindUs.html">Find Us</a>
+      </div>
+    </div>
+  </ul>
+  </div>
+  
+	<div class="content">
+    <header>
+        <h1>Services</h1>
+    </header>
+
+    <div class="container">
+
+        <h1><span style="color: blue;">1. Medication and Prescription Services</span></h1>
+        <p>At <span style="color: green;
+		font-weight: bold;">HealthyMeds Pharmacy</span>, 
+		we offer comprehensive medication and prescription services to ensure our patients receive the care they need. Our services include:</p>
+        
+		<ul>
+            <li>Access to a wide range of prescription and over-the-counter medications</li>
+            <li>Expert advice from our team of healthcare professionals</li>
+            <li>Convenient and secure online ordering for your prescriptions</li>
+            <li>Same-day delivery or convenient in-store pickup</li>
+            <li>Dedicated customer support to assist with any medication-related questions or concerns</li>
+        </ul>
+
+        <h1><span style="color: blue;">2. Appointment and Health Information
+		</span></h1>
+		
+        <p>In addition to our medication and prescription services, 
+		<span style="color: green; 
+		font-weight: bold;">HealthyMeds Pharmacy
+		</span> provides patients with valuable health information and support through our appointment services. Our appointment team consists of highly trained healthcare professionals who are available to discuss your health concerns and provide personalized advice and recommendations. This ensures that you have all the information you need to make informed decisions about your health.</p>
+
+        <h1><span style="color: blue;">3. Online Ordering and Delivery Services</span></h1>
+        <p>For added convenience and efficiency, 
+		<span style="color: green; 
+		font-weight: bold;">HealthyMeds Pharmacy</span> 
+		offers online ordering and delivery services for all of our medication and prescription products. Our secure and user-friendly online platform allows you to place your order 24/7, receive real-time updates on the status of your order, and track your deliveries. We also offer several delivery options, including same-day delivery, in-store pickup, and scheduled delivery. Our goal is to provide you with the most convenient and efficient way to access the medications and healthcare products you need.</p>
+        <p>We invite you to explore our online platform and learn more about the comprehensive medication and prescription services we offer. With our exceptional team of healthcare professionals, cutting-edge technology, and unwavering commitment to your health and well-being, 
+		<span style="color: green; font-weight: bold;">HealthyMeds Pharmacy</span> is your trusted partner in maintaining a healthy lifestyle.</p>
+
+    <div class="testimonial-slide">
+        <blockquote>
+            "I've been a customer at HealthyMeds Pharmacy for years. The team's dedication to providing personalized care is unmatched. Their advice has been invaluable in managing my health."
+            <cite> <span style="color: white;">- Taylor Swift</span></cite>
+        </blockquote>
+    </div>
+
+    <div class="testimonial-slide">
+        <blockquote>
+            "The appointment services at HealthyMeds Pharmacy have truly transformed my approach to healthcare. The expertise and guidance provided by their healthcare professionals have empowered me to take charge of my well-being."
+            <cite><span style="color: white;">- Emily Smith</span></cite>
+        </blockquote>
+    </div>
+
+    <div class="testimonial-slide">
+        <blockquote>
+            "The online ordering and delivery services provided by HealthyMeds Pharmacy have made managing my prescriptions effortless. Their user-friendly platform and prompt deliveries have been a game-changer for me in accessing my medications conveniently."
+            <cite><span style="color: white;">- Sarah Johnson</span></cite>
+        </blockquote>
+    </div>
+	</div>
+	</div>
+        <script src="Services.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body {
+			background: linear-gradient(#0f4675 30%, #54E5EA 70%, #fff 100%);
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+		background-color: #0f4675;
+		text-align: center;
+		padding: 20px 0;
+		
+}
+
+        h1 {
+            color: #ffffff;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .container {
+            max-width: 960px;
+			line-height: 1.6;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+		
+		.contact-info {
+			margin-top: 20px;
+			line-height: 1.6;
+		}
+
+		.contact-info strong {
+			font-weight: bold;
+		}
+		
+		.list {
+		list-style: circle;	
+		}

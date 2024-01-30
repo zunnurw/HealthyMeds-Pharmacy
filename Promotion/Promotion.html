@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promotion</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.5.0/jquery.mobile-1.5.0.min.js"></script>
+	
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+	.content {
+	margin-top: 120px;
+	padding: 16px;
+	}
+
+    #navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+	  z-index: 1000;
+    }
+	
+    #navbar ul {
+   list-style-type: none;
+   padding: 0;
+   overflow: hidden;
+   background-color: #D4FAFF;
+   border-radius: 10px;
+   border-style: solid;
+   margin-right: 20px;
+   margin-top: 1px;
+   }
+   
+   #navbar li {float: left;}
+   
+   #navbar li a {
+   display: block;
+   text-align: center;
+   padding: 42px 70px;
+   text-decoration: none;
+   font-family: fantasy;
+   color: indigo;
+   font-size: 20px;
+   }
+   
+   #navbar li a:hover {
+   background-color: #FFEA00;
+   color: black;
+   }
+   
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown .dropbtn {
+      font-size: 20px;
+      border: none;
+      outline: none;
+	  font-family: fantasy;
+      color: indigo;
+      padding: 40px 80px;
+      background-color: inherit;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #D4FAFF;
+      min-width: 200px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Style for the dropdown links */
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 20px;
+      text-align: center;
+	  font-family: fantasy;
+      color: indigo;
+    }
+
+    /* Change color on hover for dropdown links */
+    .dropdown-content a:hover {
+      background-color: #FFEA00;
+      color: black;
+    }
+
+    .dropdown .dropbtn:hover {
+      color: black;
+    }
+	
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+  
+  </head>
+<body>
+  <div id="navbar">
+  <ul>
+   <li><img src="images/logo.png" alt="Pharmacylogo" width="80" height="100"
+   style="margin-left: 20px; margin-bottom: 2px; margin-top: 2px; 
+   margin-right: 40px;"></li>
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="../AboutUs/AboutUs.html">About Us</a></li>
+   <li><a href="../Services/Services.html">Services</a></li>
+   <li><a href="../Products/Products.html">Products</a></li>
+   <li><a href="../ContactUs/ContactUs.html">Contact Us</a></li>
+    <div class="dropdown">
+      <button class="dropbtn">More
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="../Promotion/Promotion.html">Promotion</a>
+        <a href="../FindUs/FindUs.html">Find Us</a>
+      </div>
+    </div>
+  </ul>
+  </div>
+	<div class="content">
+	<header>
+    <h1>Promotion</h1>
+	</header>
+	<div class="slider-frame">
+		<div class="slide-images">
+			<div class="img-container">
+				<img src="images/pic1.png">
+			</div>
+			<div class="img-container">
+				<img src="images/pic2.png">
+			</div>
+			<div class="img-container">
+				<img src="images/pic3.png">
+			</div>
+	   </div>
+	</div>
+</div>
+</body>
+</html> 

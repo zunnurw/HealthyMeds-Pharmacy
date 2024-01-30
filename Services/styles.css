@@ -1,0 +1,136 @@
+body {
+			background: linear-gradient(#0f4675 30%, #54E5EA 70%, #fff 100%);
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+		background-color: #0f4675;
+		text-align: center;
+		padding: 20px 0;
+		
+}
+
+        h1 {
+            color: #ffffff;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .container {
+            max-width: 960px;
+			line-height: 1.6;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .modal {
+            position: fixed;
+			line-height: 3.6;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            position: relative;
+            padding: 30px;
+            border-radius: 0px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: #007c8c;
+            font-weight: bold; 
+            font-size: 30px;
+            background-color: black;
+        }
+        
+        .modal-content p {
+            margin-bottom: 0;
+			line-height: 1.6;
+        }
+        
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 30px;
+            cursor: pointer;
+            font-size: 80px; /* Adjust the font size for better visibility */
+            color: white;
+            transition: color 0.3s ease;
+            z-index: 999; /* Ensure it's above other content */
+        }
+        
+        .close:hover {
+            color: red;
+        }
+
+.testimonial-slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: rgb(32, 215, 218);
+    background-color: rgb(0, 0, 0);
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonials-slider {
+    max-width: 100%;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(0, 0, 0);
+}
+
+.testimonial-slide blockquote {
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(1, 1, 1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-slide blockquote p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.testimonial-slide blockquote cite {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.testimonial-slide {
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+ 
